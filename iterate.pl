@@ -59,6 +59,7 @@ say 'postfix for/foreach';
 say $_ foreach (@nums);
 
 say 'postfix while/until';
+my $j = 0;
 say $j++ while ($j < $magic+1);
 
 say 'map';
