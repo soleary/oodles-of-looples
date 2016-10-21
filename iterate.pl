@@ -68,8 +68,7 @@ map { say $_ } @nums;
 say 'recursion';
 sub baz {
     my $k = $_[0];
-    return $k if $k > $magic;
-    say $k++;
-    return baz($k);
+    return baz($k - 1) . "$k\n" if $k >= 0;
 }
-baz(0);
+
+print baz($magic);
